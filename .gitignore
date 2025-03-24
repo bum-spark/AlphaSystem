@@ -1,0 +1,19 @@
+# Ignorar dependencias de Laravel y Angular
+laravel/vendor/
+angular/node_modules/
+
+# Archivos del entorno
+*.env
+.env.*
+.DS_Store
+
+# Caché y logs de Laravel
+storage/
+bootstrap/cache/
+
+# Builds de Angular
+angular/dist/
+
+# Configuración de IDEs
+.vscode/
+.idea/
