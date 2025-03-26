@@ -13,6 +13,8 @@ bootstrap/cache/
 
 # Builds de Angular
 angular/dist/
+node_modules/
+
 
 # Configuración de IDEs
 .vscode/
