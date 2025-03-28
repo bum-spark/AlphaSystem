@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import path from 'path';
-import { VistaGeneralComponent } from './components/vista-general/vista-general.component';
-import { CrearActualizarComponent } from './components/crear-actualizar/crear-actualizar.component';
-import { VistaComponent } from './components/vista/vista.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { CatalogoComponent } from './components/catalogo/catalogo.component';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { QuienesComponent } from './components/quienes/quienes.component';
+
 
 const routes: Routes = [
   {
@@ -12,24 +13,20 @@ const routes: Routes = [
     component: NavbarComponent,
     children: [
       {
-        path:'vista',
-        component: VistaGeneralComponent
+        path:'catalogo/:id',
+        component: CatalogoComponent
       },
       {
-        path:'crear',
-        component: CrearActualizarComponent
+        path:'inicio',
+        component: InicioComponent
       },
       {
-        path: 'ver/:id',
-        component: VistaComponent
-      },
-      {
-        path: 'actualizar/:id',
-        component: CrearActualizarComponent
+        path: 'quienes',
+        component: QuienesComponent
       },
       {
         path: '**',
-        redirectTo: 'vista'
+        redirectTo: 'inicio'
       }
     ]
   },
@@ -43,4 +40,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class PokemonesRoutingModule { }
+export class PrincipalRoutingModule { }
